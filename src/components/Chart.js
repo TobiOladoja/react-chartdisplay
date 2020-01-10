@@ -20,12 +20,10 @@ export default class Chart extends Component {
   }
 
   render() {
+    const { chartData } = this.state; // Now you don't have to say 'this.state.chartData' due to new ES6
     return (
       <div className='chart'>
-        <Bar
-          data={this.state.chartData}
-          options={{ maintainAspectRatio: false }}
-        />
+        <Bar data={chartData} options={{ maintainAspectRatio: false }} />
       </div>
     );
   }
